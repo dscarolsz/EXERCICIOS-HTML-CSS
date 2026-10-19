@@ -51,8 +51,9 @@ section {
     color: black;
 }
 
-#div-solitaria {
-    background-color: rgb(187, 97, 14);
+#img {
+    background-image: url();
+    background-size: cover;
     width: 95%;
     height: 5em;
     margin: auto;
