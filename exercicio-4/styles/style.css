@@ -1,98 +1,194 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-main {
-  width: 60%;
-  background-color: aqua;
-  height: auto;
-  margin: auto;
-  font-size: 2em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: aliceblue;
+body {
+  margin: 0;
+  background-color: #111111;
+  color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.topo {
+  background-image: url(./fundo.jpg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding: 32px 20px;
+  background-color: #050505;
   text-align: center;
+  border-bottom: 3px solid #b5121b;
 }
 
-.header-cima {
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+.topo h1 {
+  margin: 0;
+  color: #dff20c;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
 }
 
-#nav-cima {
-  background-color: rgb(10, 10, 138);
-  text-align: left;
+.topo p {
+  margin: 8px 0 0;
+  color: #e6cc0a;
 }
 
-#nav-esquerda {
-    background-color: rgb(189, 188, 188);
-    float: left;
-    width: 20%;
-    height: 14em;
+.menu-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #1c1c1c;
 }
 
-section {
-    float: left;
-    width: 60%;
-    height: 14em;
-    background-color: pink;
-    align-items: center;
+.menu-principal a,
+.menu-lateral a {
+  color: #e5e5e5;
+  text-decoration: none;
 }
 
-.header-baixo {
-    width: 95%;
-    margin: auto;
-    background-color: rgb(255, 255, 255);
-    font-size: 4vh;
-    color: black;
+.menu-principal a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
 }
 
-#img {
-    background-image: url();
-    background-size: cover;
-    width: 95%;
-    height: 5em;
-    margin: auto;
-    margin-top: 5px;
+.menu-principal a:hover,
+.menu-lateral a:hover {
+  background-color: #b5121b;
 }
 
-section p {
-    background-color: rgb(217, 180, 252);
-    width: 95%;
-    height: 5em;
-    margin: auto;
-    margin-top: 5px;
-    font-size: 3vh;
-    text-align: left;
+.layout {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) 200px;
+  gap: 20px;
+  width: min(1200px, 100%);
+  margin: 24px auto;
+  padding: 0 20px;
 }
 
-.div-container {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    margin-top: 5px; 
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background-color: #1a1a1a;
+  border: 1px solid #777777;
+  border-radius: 8px;
+}
+
+.menu-lateral a {
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.conteudo {
+  min-width: 0;
+}
+
+.conteudo h2 {
+  margin-top: 0;
+  color: #c0c0c0;
+  text-transform: uppercase;
+}
+
+.imagem-principal {
+  min-height: 320px;
+  background-color: #222222;
+  background-image: url("./ALEE - DISCO DE PLATINA.jpg");
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #b5121b;
+  border-radius: 8px;
+}
+
+.descricao {
+  color: #d0d0d0;
+  font-size: 1.05rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .linha {
-    width: 31.66%;
-    background-color: grey;
-    margin-top: auto;
-    height: 3.2em;
+  min-height: 150px;
+  background-color: #222222;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #777777;
+  border-radius: 8px;
 }
 
-aside {
-    float: left;
-    width: 20%;
-    height: 14em;
-    background-color: rgb(231, 10, 231);
+#imagem1 {
+  background-image: url("./Alee (2).jpg");
+  background-position: top;
+  background-size: cover;
 }
 
-footer {
-    background-color: black;
+#imagem2 {
+  background-image: url("./alee.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+#imagem3 {
+  background-image: url("./1134062749913642456.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.anuncio {
+  background-image: url("./Alee (3).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #1a1a1a;
+  border: 1px solid #777777;
+  border-radius: 8px;
+}
+
+.rodape {
+  padding: 20px;
+  background-color: #050505;
+  color: #c0c0c0;
+  text-align: center;
+  border-top: 3px solid #b5121b;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-lateral {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .anuncio {
+    order: 1;
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-lateral {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .imagem-principal {
+    min-height: 220px;
+  }
 }

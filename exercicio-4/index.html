@@ -1,47 +1,88 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercicio - 5</title>
+    <title>CAOS — Alee</title>
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
+
   <body>
-    <main>
-      <header class="header-cima">Curso de HTML5</header>
-      <nav id="nav-cima">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">JavaScript</a>
-        <a href="#">Jquery</a>
-        <a href="#">Animação</a>
-        <a href="#">Formulário</a>
+    <header class="topo">
+      <h1>Caos é o início de tudo</h1>
+      <p>Uma página inspirada no álbum de Alee</p>
+    </header>
+
+    <nav class="menu-principal" aria-label="Menu principal">
+      <a href="#html">HTML</a>
+      <a href="#css">CSS</a>
+      <a href="#javascript">JavaScript</a>
+      <a href="#jquery">jQuery</a>
+      <a href="#animacao">Animação</a>
+      <a href="#formulario">Formulário</a>
+    </nav>
+
+    <div class="layout">
+      <nav class="menu-lateral" aria-label="Links secundários">
+        <a href="#link1">Link 1</a>
+        <a href="#link2">Link 2</a>
+        <a href="#link3">Link 3</a>
+        <a href="#link4">Link 4</a>
+        <a href="#link5">Link 5</a>
+        <a href="#link6">Link 6</a>
+        <a href="#link7">Link 7</a>
+        <a href="#link8">Link 8</a>
+        <a href="#link9">Link 9</a>
+        <a href="#link10">Link 10</a>
+        <a href="#link11">Link 11</a>
       </nav>
-      <nav id="nav-esquerda">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
-        <a href="#">Link 5</a>
-        <a href="#">Link 6</a>
-        <a href="#">Link 7</a>
-        <a href="#">Link 8</a>
-        <a href="#">Link 9</a>
-        <a href="#">Link 10</a>
-        <a href="#">Link 11</a>
-      </nav>
-      <section>
-        <header class="header-baixo">Título</header>
-        <div id="img">DIV</div>
-        <p>Paragrafo</p>
-        <div class="div-container">
-          <div class="linha">DIV</div>
-          <div class="linha">DIV</div>
-          <div class="linha">DIV</div>
-        </div>
-      </section>
-      <aside>ASIDE</aside>
-      <footer>FOOTER</footer>
-    </main>
+
+      <main>
+        <section class="conteudo" aria-labelledby="titulo-album">
+          <h2 id="titulo-album">Alee — Disco de platina</h2>
+
+          <div
+            id="img"
+            class="imagem-principal"
+            role="img"
+            aria-label="Imagem principal do álbum"
+          ></div>
+
+          <p class="descricao">
+            “O caos é o início de tudo. É na desordem que nascem as mudanças,
+            nas incertezas que surgem as oportunidades e nos momentos mais
+            difíceis que encontramos a força para recomeçar. Afinal, antes de
+            toda transformação, existe algo que precisa sair do lugar.”
+          </p>
+
+          <div class="galeria" aria-label="Galeria de imagens">
+            <div
+              class="linha"
+              id="imagem1"
+              role="img"
+              aria-label="Imagem 1"
+            ></div>
+            <div
+              class="linha"
+              id="imagem2"
+              role="img"
+              aria-label="Imagem 2"
+            ></div>
+            <div
+              class="linha"
+              id="imagem3"
+              role="img"
+              aria-label="Imagem 3"
+            ></div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="anuncio"></aside>
+    </div>
+
+    <footer class="rodape">
+      <p>Projeto de estudo de HTML e CSS</p>
+    </footer>
   </body>
 </html>
